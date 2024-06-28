@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "ES2022",
+		"lib": [
+			"ES2022"
+		],
+		"esModuleInterop": true,
+		"allowJs": true,
+		"outDir": "./out",
+    	"allowSyntheticDefaultImports": true,
+		"sourceMap": true,
+		"rootDir": ".",
+		"strict": true   /* enable all strict type-checking options */
+		/* Additional Checks */
+		// "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
+		// "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
+		// "noUnusedParameters": true,  /* Report errors on unused parameters. */
+	},
+	"include": [
+		"media/**/*", "media/debug.js", "media/info.js", "server/server.mjs", "server/debug.mjs",
+	]
+}

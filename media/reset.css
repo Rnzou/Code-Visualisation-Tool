@@ -1,0 +1,111 @@
+html {
+	box-sizing: border-box;
+	font-size: 13px;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.arrow {
+	color: red;
+	font-weight: bold;
+	margin-right: 10px;
+	display: inline-block;
+	width: 20px;
+	font-size: 24px;
+}
+
+.code {
+	display: inline-block;
+	color: #333; /* 深灰色, 也可以选择黑色 #000 */
+	font-size: 16px; /* 增加字体大小 */
+}
+
+pre {
+    font-family: 'Courier New', monospace;
+    background-color: rgb(220, 220, 220); /* 浅灰色背景 */
+    border: 2px solid black; /* 黑色边框 */
+    padding: 10px; /* 内边距 */
+    overflow: auto; /* 滚动条 */
+    max-height: 80vh; /* 最大高度为视窗的80% */
+    height: 80vh; /* 高度为视窗的80% */
+    width: 50vw; /* 宽度为视窗的40% */
+    color: black; /* 文字颜色设为黑色 */
+    box-sizing: border-box; /* 包括边框和内边距在宽度内 */
+}
+
+input[type="range"], .button-container {
+	width: 300px; /* 滑块和按钮容器的宽度 */
+	margin-left: 6%;
+}
+
+.button-container {
+	margin-top: 5px;
+	display: flex; /* 使按钮容器使用flex布局 */
+	justify-content: space-evenly; /* 两个按钮间距平均分布 */
+
+}
+
+button {
+	width: 100px; /* 按钮宽度 */
+	padding: 8px 16px; /* 按钮内部填充 */
+	font-size: 16px; /* 字体大小 */
+	cursor: pointer; /* 鼠标指针样式 */
+	margin: 3px;
+}
+
+.slider-container {
+    display: flex; /* 启用 Flexbox，使子元素水平排列 */
+    align-items: flex-start; /* 子元素顶部对齐 */
+    padding: 20px; /* 容器内边距 */
+}
+
+.controls-container {
+	display: flex;
+	justify-content: center;
+    flex-grow: 0; /* 控制容器不伸展填充，只占用其需要的空间 */
+}
+
+.slider-display {
+    display: flex;    /* 使用弹性布局 */
+    align-items: center; /* 垂直居中对齐 */
+    gap: 10px;        /* 两个元素之间的间隙 */
+}
+
+.animation-container {
+	margin-left: 5%;
+	margin-top: -490px;
+    display: flex; /* 动画容器内部也使用 flex 布局，用于排列动画 */
+    flex-direction: column; /* 设置排列方向为垂直 */
+    align-items: center; /* 子元素水平居中对齐 */
+}
+
+.animation-container > div {
+    margin: 10px; /* 为每个动画容器添加一些间距 */
+}
+
+
+
