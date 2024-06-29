@@ -51,6 +51,7 @@ pre {
     padding: 10px; /* 内边距 */
     overflow: auto; /* 滚动条 */
     max-height: 80vh; /* 最大高度为视窗的80% */
+	margin-left: 0.8%;
     height: 80vh; /* 高度为视窗的80% */
     width: 50vw; /* 宽度为视窗的40% */
     color: black; /* 文字颜色设为黑色 */

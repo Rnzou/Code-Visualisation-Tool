@@ -258,7 +258,6 @@ function drawNumbers(numbers) {
         };
 
         p.draw = function() {
-            p.background(220);
             p.textAlign(p.CENTER, p.CENTER);
 
             draws.forEach(num => {
@@ -313,7 +312,6 @@ function drawArrays(dataArrays) {
         };
 
         p.draw = function () {
-            p.background(220);
             let chartHeight = p.height / dataArrays.length;
             dataArrays.forEach((item, index) => {
                 drawBarChart(p, item.value, item.name, item.type, 0, chartHeight * index, p.width, chartHeight);
@@ -375,7 +373,6 @@ function drawPointerArrays(dataset) {
         };
 
         p.draw = function() {
-            p.background(220);
             p.textSize(16);
         
             let yOffset = 20; 
@@ -509,6 +506,7 @@ function drawList(values = []) {
                 this.drawNode(true);
             }
 
+
             drawNode(isEnd) {
                 let p = this.p;
                 p.stroke(0);
@@ -582,7 +580,6 @@ function drawtrees(treesData) {
       };
   
       p.draw = function() {
-        p.background(255);
         roots.forEach(root => {
             if (root) {
                 p.translate(root.x - p.width / 2, 20); // Center the tree horizontally
@@ -679,6 +676,22 @@ async function loadCodeFromFile(filePath) {
     }
 };
 
+function pointArrowToLine(lineID) {
+    const arrows = document.querySelectorAll('.arrow');
+    arrows.forEach(arrow => arrow.textContent = ' '); 
+    const targetLine = document.getElementById(lineID);
+    if (targetLine) {
+        targetLine.querySelector('.arrow').textContent = '→';
+        targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' }); // 自动滚动到该行
+    }
+};
+
+function drawArrows(lineIndex) {
+    const codeLines = document.querySelectorAll('.code');
+    pointArrowToLine(`code-line-${lineIndex}`);
+};
+
+
 function findNodeByAddress(nodes, targetAddress) {
     function searchNode(node) {
         if (node === null) {
@@ -704,17 +717,4 @@ function findNodeByAddress(nodes, targetAddress) {
 }
 
 
-function pointArrowToLine(lineID) {
-    const arrows = document.querySelectorAll('.arrow');
-    arrows.forEach(arrow => arrow.textContent = ' '); 
-    const targetLine = document.getElementById(lineID);
-    if (targetLine) {
-        targetLine.querySelector('.arrow').textContent = '→';
-    }
-};
 
-
-function drawArrows(lineIndex) {
-    const codeLines = document.querySelectorAll('.code');
-    pointArrowToLine(`code-line-${lineIndex}`);
-};
